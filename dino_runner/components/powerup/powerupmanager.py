@@ -9,7 +9,7 @@ class PowerUpManager:
         self.points = 0
         self.option_numbers = list(range(1,10))
     
-    def reset_power_ups(self,points):
+    def reset_power_ups(self, points):
         self.power_ups = []
         self.points = points
         self.when_appears = random.randint(200,300) + self.points
