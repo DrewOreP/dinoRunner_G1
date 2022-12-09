@@ -5,6 +5,8 @@ from dino_runner.components.obstacle.obstacleManager import ObstacleManager
 from dino_runner.components.score_menu.text_utils import *
 from dino_runner.components.player_hearts.player_heart_manager import PlayerHeartManager
 from dino_runner.components.powerup.powerupmanager import PowerUpManager
+#from dino_runner.components.cloud.cloud import Cloud
+#from dino_runner.utils.constants import CLOUD
 
 class Game:
     def __init__(self):
@@ -19,6 +21,7 @@ class Game:
         self.y_pos_bg = 380
         self.player = Dinosaur()
         self.obstacle_manager = ObstacleManager()
+        #self.cloud = Cloud()
         
         self.points = 0
         self.death_count = 0
@@ -60,6 +63,7 @@ class Game:
         self.score()
         self.player_heart_manager.draw(self.screen)
         self.power_up_manager.draw(self.screen)
+        #self.cloud.draw(self.screen)
         pygame.display.update()
         pygame.display.flip()
 
